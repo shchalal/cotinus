@@ -1,0 +1,57 @@
+  
+    .header-top {
+        padding: 10px 10px;  
+      }
+
+
+    .logo {
+        display: none; 
+    }
+    
+    .heading {
+        position: relative;
+        width: 100%;
+    }
+
+    .header_icon {
+        display: block;
+        text-align: center; 
+    }
+
+    .heading_h1 {
+        font-size: 20px;
+    }
+
+    .menu a {
+        display: none;
+     }
+
+  
+    .hamburger {
+          display: block;
+          color: white;
+          font-size: 25px;
+        }
+  
+    .hamburger.active {
+          display: none;
+      }
+
+    .menu_header.active {
+          display: block; 
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: #333;
+          width: 100%;
+          z-index: 3;
+      }
+  
+    .menu_header.active a {
+          padding: 15px;
+          display: block;
+          text-align: center;
+      }
+  
+     

@@ -1,0 +1,58 @@
+.header-top {
+  padding: 0 30px;  
+}
+    
+.logo {
+  width: 20%; 
+}
+
+.heading {
+  max-width: 60%;
+}
+
+.icon-container {
+    display: none;
+  }
+
+.menu a {
+  display: none;
+}
+      
+.hamburger {
+  display: block;
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 0px; 
+  right: 30px;
+}
+
+.menu_header {
+    display: none;
+}
+      
+.hamburger.active {
+  display: none;
+}
+    
+.menu_header.active {
+  display: block; 
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  z-index: 3;
+}
+      
+.menu_header.active a {
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+    
+         
+       
+
+
