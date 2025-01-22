@@ -1,0 +1,79 @@
+  
+.header {
+    height: 100vh;
+  }
+
+.header-top {
+  padding: 10px 10px;  
+}
+
+.logo {
+  display: none; 
+}
+    
+.heading {
+  position: relative;
+  width: 100%;
+}
+
+.header_icon {
+  display: block;
+  text-align: center; 
+}
+
+.heading_h1 {
+  font-size: 30px;
+}
+
+.menu a {
+  display: none;
+} 
+      
+.card {
+  width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2% 0 3%;
+}
+
+.post-list {
+    margin-top: 62px;
+    width: 100%;
+}
+
+.side_bar {
+    width: 100%;
+    padding-top: 0;
+    
+}
+
+
+.shop {
+    padding: 0 2% 0 3%;
+}   
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.product_image img {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+.sale {
+    margin-bottom: 5%;
+  }
+
+
+
+

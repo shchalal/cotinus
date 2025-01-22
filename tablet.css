@@ -1,0 +1,91 @@
+.header-top {
+  padding: 0 30px;  
+}
+    
+.logo {
+  width: 20%; 
+}
+
+.heading {
+  max-width: 60%;
+}
+
+.icon-container {
+    display: none;
+  }
+
+.menu a {
+  display: none;
+}
+      
+.hamburger {
+  display: block;
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 0px; 
+  right: 30px;
+  cursor: pointer;
+}
+   
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 20%;
+    right: 30px;
+    top: -5px;
+    gap: 0;
+    padding: 0;
+}
+
+.menu_header.active a {
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    right: 0;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+  }
+
+.card {
+    width: calc(50% - 2px);
+    min-width: none;
+  }
+    
+.post {
+  flex-direction: column;
+  padding: 0 2% 0 3%;
+}   
+ 
+.menu-img-main {
+    width: 100%; 
+    max-width: none;
+}   
+
+.side_bar {
+    width: calc(33% - 10px);
+    max-width: none;
+}
+
+.search-bar {
+    max-width: none;
+}
+
+.form-row {
+    max-width: none;
+}
+
+.text {
+    max-height: none;
+    max-width: none;
+}
+
+.main-categories {
+    margin-top: 10px;
+}
+
+
+
