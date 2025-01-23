@@ -345,6 +345,7 @@ body {
     padding-top: 48px;
     width: 23.7%;
     max-width: 270px;
+    min-width: 250px;
     text-transform: uppercase;
     box-sizing: border-box;
     display: flex;
@@ -862,10 +863,10 @@ body {
   }
   
   ._hidden {
-    /*display: none; */
+    display: none; */
   }
 
-  @media screen and (max-width: 1200px) and (orientation: portrait) {
+  @media screen and (max-width: 1200px) {
     .header-top {
       padding: 0 30px;  
     }
@@ -893,95 +894,156 @@ body {
       position: absolute;
       top: 0px; 
       right: 30px;
+      cursor: pointer;
+    }
+       
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 20%;
+        right: 30px;
+        top: -5px;
+        gap: 0;
+        padding: 0;
     }
     
-    .menu_header {
-        display: none;
-    }
-          
-    .hamburger.active {
-      display: none;
-    }
-        
-    .menu_header.active {
-      display: block; 
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #333;
-      width: 100%;
-      z-index: 3;
-    }
-          
     .menu_header.active a {
-      padding: 15px;
-      display: block;
-      text-align: center;
-    }    
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        right: 0;
+        background-color: transparent;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+      }
+    
+    .card {
+        width: calc(50% - 2px);
+        min-width: none;
+      }
+        
+    .post {
+      flex-direction: column;
+      padding: 0 2% 0 3%;
+    }   
+     
+    .menu-img-main {
+        width: 100%; 
+        max-width: none;
+    }   
+    
+    .side_bar {
+        width: calc(33% - 10px);
+        max-width: none;
+    }
+    
+    .search-bar {
+        max-width: none;
+    }
+    
+    .form-row {
+        max-width: none;
+    }
+    
+    .text {
+        max-height: none;
+        max-width: none;
+    }
+    
+    .main-categories {
+        margin-top: 10px;
+    }
   }
 
   @media screen and (max-width: 1200px) and (orientation: landscape) {
-
+    .card {
+      width: calc(25% - 3px);
+    }
   }
 
-  @media screen and (max-width: 768px) and (orientation: portrait) {
-    .header-top {
-      padding: 10px 10px;  
-    }
+  @media screen and (max-width: 768px) {
+      
+.header {
+  height: 100vh;
+}
+
+.header-top {
+padding: 10px 10px;  
+}
+
+.logo {
+display: none; 
+}
+  
+.heading {
+position: relative;
+width: 100%;
+}
+
+.header_icon {
+display: block;
+text-align: center; 
+}
+
+.heading_h1 {
+font-size: 30px;
+}
+
+.menu a {
+display: none;
+} 
+    
+.card {
+width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2% 0 3%;
+}
+
+.post-list {
+  margin-top: 62px;
+  width: 100%;
+}
+
+.side_bar {
+  width: 100%;
+  padding-top: 0;
+  
+}
 
 
-  .logo {
-      display: none; 
+.shop {
+  padding: 0 2% 0 3%;
+}   
+
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.product_image img {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.sale {
+  margin-bottom: 5%;
+}
   }
   
-  .heading {
-      position: relative;
-      width: 100%;
-  }
-
-  .header_icon {
-      display: block;
-      text-align: center; 
-  }
-
-  .heading_h1 {
-      font-size: 20px;
-  }
-
-  .menu a {
-      display: none;
-   }
-
-
-  .hamburger {
-        display: block;
-        color: white;
-        font-size: 25px;
-      }
-
-  .hamburger.active {
-        display: none;
-    }
-
-  .menu_header.active {
-        display: block; 
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        z-index: 3;
-    }
-
-  .menu_header.active a {
-        padding: 15px;
-        display: block;
-        text-align: center;
-    }
-  }
 
   @media screen and (max-width: 768px) and (orientation: landscape) {
-  
+    .card {
+      width: calc(50% - 2px);
+    }
   }
