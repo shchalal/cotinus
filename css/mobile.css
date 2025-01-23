@@ -1,57 +1,79 @@
   
-    .header-top {
-        padding: 10px 10px;  
-      }
+.header {
+    height: 100vh;
+  }
 
+.header-top {
+  padding: 10px 10px;  
+}
 
-    .logo {
-        display: none; 
-    }
+.logo {
+  display: none; 
+}
     
-    .heading {
-        position: relative;
-        width: 100%;
-    }
+.heading {
+  position: relative;
+  width: 100%;
+}
 
-    .header_icon {
-        display: block;
-        text-align: center; 
-    }
+.header_icon {
+  display: block;
+  text-align: center; 
+}
 
-    .heading_h1 {
-        font-size: 20px;
-    }
+.heading_h1 {
+  font-size: 30px;
+}
 
-    .menu a {
-        display: none;
-     }
+.menu a {
+  display: none;
+} 
+      
+.card {
+  width: 100%;
+}
 
-  
-    .hamburger {
-          display: block;
-          color: white;
-          font-size: 25px;
-        }
-  
-    .hamburger.active {
-          display: none;
-      }
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2% 0 3%;
+}
 
-    .menu_header.active {
-          display: block; 
-          flex-direction: column;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          background-color: #333;
-          width: 100%;
-          z-index: 3;
-      }
-  
-    .menu_header.active a {
-          padding: 15px;
-          display: block;
-          text-align: center;
-      }
-  
-     
+.post-list {
+    margin-top: 62px;
+    width: 100%;
+}
+
+.side_bar {
+    width: 100%;
+    padding-top: 0;
+    
+}
+
+
+.shop {
+    padding: 0 2% 0 3%;
+}   
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.product_image img {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+.sale {
+    margin-bottom: 5%;
+  }
+
+
+
+
