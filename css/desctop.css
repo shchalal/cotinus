@@ -1,4 +1,4 @@
-/*стили + медиазапросы*/
+
 :root {
   --color-white: #fff;
   --color-lightgray: #f0f0f0;
@@ -28,7 +28,7 @@ body {
   font-family: "OpenSans-Bold";
   src: url("../fonts/OpenSans-Bold.woff");
   src: url("../fonts/OpenSans-Bold.ttf");
-  src: url("../fonts/OpenSans-Regular.woff2");
+  src: url("../fonts/OpenSans-Bold.woff2");
 }
 
 .header {
@@ -177,7 +177,6 @@ body {
   gap: 2px;
   flex-wrap: wrap;
   position: relative;
-  justify-content: center;
   flex-direction: row;
 }
 
@@ -240,6 +239,8 @@ body {
   font-size: 14px;
   line-height: 140%;
   margin-top: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .main {
@@ -333,6 +334,7 @@ body {
   font-family: "OpenSans-Bold";
   margin-left: 7px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .text {
@@ -553,7 +555,7 @@ input:focus {
 }
 
 .count {
-  font-family: OpenSans-Bold;
+  font-family: "OpenSans-Bold";
   font-size: 10px;
   color: var(--color-yellow);
   vertical-align: super;
@@ -577,17 +579,20 @@ input:focus {
   padding: 0% 0% 0 2.5%;
   top: -12px;
   margin: 0 auto;
-  right: 30px;
+ 
 }
 
-.products {
-  font-family: OpenSans-Bold;
+.products_name {
+  font-family: "OpenSans-Bold";
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+}
+
+.products {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
@@ -598,19 +603,23 @@ input:focus {
   position: relative;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   flex: 0 0 calc((100% - 2 * 50px) / 3);
   min-width: 300px;
+  box-sizing: border-box;
 }
 
-.product_image img {
+.product_image {
   position: relative;
-  width: 80%;
   height: auto;
   object-fit: cover;
   min-width: 300px;
   display: flex;
-  padding-left: 20px;
+  justify-content: center;
+}
+
+.product_image img {
+  width: 85%;
+  justify-content: center;
 }
 
 .shop_card {
@@ -627,7 +636,7 @@ input:focus {
 }
 
 .product-text {
-  font-family: OpenSans-Bold;
+  font-family: "OpenSans-Bold";
   text-transform: uppercase;
   font-size: 16px;
   display: flex;
@@ -644,6 +653,7 @@ input:focus {
 
 .product_description {
   font-family: "OpenSans-Regular";
+  font-weight: 400;
   text-transform: none;
   font-size: 15px;
   line-height: 145%;
@@ -680,7 +690,7 @@ input:focus {
   height: 45px;
   background-color: var(--color-yellow);
   color: white;
-  font-family: OpenSans-Bold;
+  font-family: "OpenSans-Bold";
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
@@ -875,17 +885,24 @@ input:focus {
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+  .header {
+    min-height: 400px;
+  }
   .header-top {
-    padding: 0 30px;
+    padding: 20px 40px;
   }
 
   .logo {
-    width: 20%;
+    width: 22%;
   }
 
   .heading {
-    max-width: 60%;
+    max-width: 85%;
+  }
+
+  .heading_h1 {
+    font-size: 40px;
   }
 
   .icon-container {
@@ -928,30 +945,78 @@ input:focus {
     z-index: 3;
   }
 
+  .teaser {
+    right: 0;
+  }
+
+  .trends_now {
+    margin-top: 40px;
+  }
+
   .card {
     width: calc(50% - 2px);
     min-width: none;
+    left: 0px;
+    height: 250px;
   }
 
 
   .card__body {
     border: 3px solid var(--color-yellow);
     width: 90%;
+    margin: 2% 7% 4% 5%;
+    padding: 4% 12% 4% 7%;
+  }
+
+  .card-text {
+    font-size: 16px;
+  } 
+  
+  .main {
+    padding: 0 2% 0 2%;
   }
 
   .post {
+    margin-top: -10px;
     flex-direction: column;
     padding: 0 2% 0 3%;
   }
 
+  .post-list {
+    width: calc(100% - 300px);
+  }
+
+  .post-title {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
   .menu-img-main {
-    width: 100%;
+    width: 95%;
     max-width: none;
   }
 
+  .date-author {
+    margin-bottom: 30px;
+  }
+
+  .separator-line-long-mobile {
+      position: relative;
+      display: block;
+      width: 100%;
+      border: none;
+      border: 2px solid var(--color-lightgray);
+      margin-top: -40px;
+      margin-bottom: 10%;
+      width: 93%;
+      left: 3%;
+    }
+
   .side_bar {
-    width: calc(33% - 10px);
-    max-width: none;
+    width: 270px;
+    padding-top: 38px;
+    right: 20px;
   }
 
   .search-bar {
@@ -971,25 +1036,49 @@ input:focus {
     margin-top: 10px;
   }
 
+ 
+  .shop {
+    top: -15px;
+    font-size: 22px;
+    padding: 0% 5% 0 2.5%;
+  }
+
+  .products {
+    gap: 30px;
+  }
+
   .product {
-    left: 20px;
+    left: 0px;
     flex: 0 0 calc((100% - 50px) / 2);
   }
 
-  .product_image {
-    width: 100%;
-    justify-content: center;
+  .product_image img {
+    width: 85%;
+    height: 120%;
     padding-left: 0px;
-
-  }
+    min-width: 100px;
 }
 
+.shop_card {
+  margin-top: 0px;
+}
+
+.product-text {
+  padding-top: 15%;
+}
+}
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   .card {
     width: calc(25% - 3px);
   }
-}
+
+  .product {
+    left: 0px;
+    flex: 0 0 calc((100% - 50px) / 2);
+  }
+} 
+
 
 @media screen and (max-width: 768px) {
 
@@ -1015,15 +1104,17 @@ input:focus {
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
     width: 400px;
   }
 
   .heading_h1 {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    width: 100%;
     font-size: 40px;
-    width: 450px;
-    top: 65%;
-    right: 20%;
     line-height: 145%;
   }
 
@@ -1053,23 +1144,23 @@ input:focus {
   }
 
   .card__body {
-    padding: 6% 2% 3% 5%;
-    margin: 0 2% 5% 3%;
+    width: 90%;
+    padding: 0% 5% 5% 5%;
   }
 
 
   .card-text {
     width: 100%;
     font-size: 24px;
-    line-height: 155%;
-    margin-top: 25px;
+    line-height: 120%;
     text-transform: uppercase;
+    margin-top: 5%;
   }
 
   .main {
     display: flex;
     flex-direction: column;
-    padding: 0 2% 0 3%;
+    padding: 2% 1% 5% 2%;
   }
 
   .post-list {
@@ -1077,50 +1168,55 @@ input:focus {
     width: 100%;
   }
 
+  .menu-img-main {
+    width: 100%;
+  }
+
   .main-categories {
-    margin-top: 3%;
+    margin-top: 4%;
     font-size: 20px;
-    margin-bottom: 20px;
+  }
+
+  .post-title {
+    margin-top: 6%;
+    font-size: 24px;
   }
 
   .date-author .date {
     font-size: 18px;
+    margin-bottom: 0px;
   }
 
   .author {
-    margin-left: 7%;
+    margin-left: 3%;
     font-size: 18px;
     font-weight: bold;
   }
 
   .text {
-    max-height: 350px;
-    width: 100%;
-    font-size: 20px;
-    font-family: "OpenSans-Regular";
-    line-height: 155%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 22px;
+    margin-top: -10px;
+    max-width: 800px;
   }
 
   .separator-line-long-mobile {
-    position: relative;
-    display: block;
-    width: 100%;
-    border: none;
-    border: 2px solid var(--color-lightgray);
-    margin-bottom: 10%;
-    width: 93%;
-    left: 3%;
+    margin-bottom: 8%;
   }
 
   .side_bar {
     width: 100%;
-    padding-top: 0;
+    min-width: 500px;
+    padding: 5% 3% 0 3%;
+    right: 0px;
   }
 
   h2 {
     font-size: 22px;
+  }
+
+  .menu-list-item {
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   .title {
@@ -1129,12 +1225,8 @@ input:focus {
   }
 
   .menu-img {
-    width: 20%;
+    width: 23%;
     margin-right: 25px;
-  }
-
-  .menu-list-item {
-    margin-bottom: 35px;
   }
 
   .menu-list .date {
@@ -1142,15 +1234,13 @@ input:focus {
   }
   
   .search-bar {
-    margin-top: 55px;
+    margin-top: 70px;
     height: 70px;
-    width: 95%;
-    margin-bottom: 45px;
+    width: 100%;
+    margin-bottom: 50px;
   }
   
   .search-input {
-    flex-grow: 1;
-    padding: 0px 20px;
     font-size: 18px;
   }
   
@@ -1165,24 +1255,24 @@ input:focus {
   .field {
     font-size: 20px;
     height: 70px;
-    width: 95%;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 35px;
     padding-left: 20px;
-    margin-right: 4%;
+    
   }
   
   .sent-button {
-    width: 95%;
+    width: 100%;
     height: 70px;
     font-weight: bold;
     font-size: 20px;
-    margin-right: 4%;
+    
   }
   
   
   .tags {
-    margin-top: 0px;
+    margin-top: 10px;
     font-family: "OpenSans-Bold";
     font-weight: bold;
     font-size: 18px;
@@ -1192,208 +1282,92 @@ input:focus {
     margin-top: 0px;
     display: inline-block;
     line-height: 300%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   
   .tag-categories {
     border: 5px solid var(--color-gray);
-    padding: 5px 20px;
+    padding: 5px 17px;
   }
   
   .categories {
     width: 100%;
     max-width: none;
-    margin-top: 30px;
+    margin-top: 40px;
+    font-family: "OpenSans-Bold";
     font-weight: bold;
     font-size: 20px;
     
   }
   
-  .categories-list-common {
-    margin-top: -5px;
-  }
-  
   .count {
-    font-family: OpenSans-Bold;
-    font-size: 10px;
-    color: var(--color-yellow);
-    vertical-align: super;
+    font-family: "OpenSans-Bold";
+    font-size: 16px;
+    font-weight: bold;
+  
   }
   
   .separator-line-long {
-    border: none;
-    border: 1px solid var(--color-lightgray);
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 18px;
+    margin-bottom: 20px;
   }
   
   .shop {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1220px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0% 0% 0 2.5%;
-    top: -12px;
-    margin: 0 auto;
-    right: 30px;
+    top: 0px;
+    right: 0px;
   }
-  
-  .products {
-    font-family: OpenSans-Bold;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 50px;
-    height: auto;
-  }
-  
-  .product {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    flex: 0 0 calc((100% - 2 * 50px) / 3);
-    min-width: 300px;
-  }
-  
-  .product_image img {
-    position: relative;
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    min-width: 300px;
-    display: flex;
-    padding-left: 20px;
-  }
-  
+
   .shop_card {
-    position: relative;
-    display: flex;
-    width: 95%;
-    height: 100%;
-    max-height: 320px;
-    flex-direction: column;
-    border: 3px solid var(--color-yellow);
-    margin-top: -30px;
-    padding: 0 20px;
-    box-sizing: border-box;
+    max-height: 400px;
   }
   
-  .product-text {
-    font-family: OpenSans-Bold;
-    text-transform: uppercase;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    padding-top: 10%;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .product_name {
+    font-size: 24px;
+    margin-top: 10px;
   }
-  
+
   .product_description {
-    font-family: "OpenSans-Regular";
-    text-transform: none;
-    font-size: 15px;
-    line-height: 145%;
-    margin-top: -15px;
+    font-size: 20px;
+    margin-top: -10px;
   }
   
   .product_description a {
     text-decoration: none;
     color: var(--color-yellow);
   }
-  
+
   .sale {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 30px;
+    padding-bottom: 30px;
   }
-  
+
   .cost {
-    font-family: "OpenSans-Bold";
-    position: relative;
-    width: 30%;
-    text-align: left;
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
   }
   
   .cart-button {
-    position: relative;
-    width: 50%;
-    height: auto;
-    align-self: flex-end;
-    height: 45px;
-    background-color: var(--color-yellow);
-    color: white;
-    font-family: OpenSans-Bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-color: transparent;
-  }
-  
-  .cart-button:hover {
-    background-color: rgb(50, 50, 50);
+    font-size: 18px;
+    height: 70px;
   }
   
   .last_cost {
-    text-decoration: line-through;
-    font-size: 10px;
+    font-size: 20px;
   }
   
-  .footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1220px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 2.5% 2.5% 0 0.5%;
-  }
-  
-  .product_description {
-    text-align: left;
-  }
-  
+ 
   .social {
-    width: 100%;
-    height: 85px;
-    background-color: var(--color-lightgray);
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    align-items: center;
+    height: 120px;
+    gap: 30px;
   }
   
   .icon {
     display: inline-block;
-    width: 20px;
+    width: 35px;
     height: auto;
   }
   
   .copyright {
-    font-size: 12px;
-    font-family: "OpenSans-Bold";
-    color: var(--color-darkgray);
-    margin-top: 70px;
+    font-size: 18px;
   } 
 
   .shop {
