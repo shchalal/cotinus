@@ -19,16 +19,20 @@ body {
 
 @font-face {
   font-family: "OpenSans-Regular";
-  src: url("../fonts/OpenSans-Regular.woff");
-  src: url("../fonts/OpenSans-Regular.ttf");
-  src: url("../fonts/OpenSans-Regular.woff2");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  src: url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans-Bold";
-  src: url("../fonts/OpenSans-Bold.woff");
-  src: url("../fonts/OpenSans-Bold.ttf");
-  src: url("../fonts/OpenSans-Bold.woff2");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  src: url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 .header {
@@ -104,7 +108,7 @@ body {
 
 .menu a {
   font-family: "OpenSans-Regular";
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   color: var(--color-white);
   z-index: 3;
@@ -138,7 +142,7 @@ body {
   color: var(--color-white);
   line-height: 160%;
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 2.8125rem;
   top: -10px;
   right: 20px;
 }
@@ -155,19 +159,18 @@ body {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  right: 30px;
+  right: 20px;
 }
 
 .trends_now {
   font-family: "OpenSans-Bold";
-  font-size: 18px;
+  font-size: 1.25rem;
   display: flex;
   position: relative;
   align-items: center;
   text-transform: uppercase;
   margin-top: 60px;
-  font-weight: bold;
-  margin-bottom: 0px;
+  font-weight: 900;
 }
 
 .cards {
@@ -233,10 +236,11 @@ body {
 
 .card-text {
   font-family: "OpenSans-Bold";
+  font-weight: 900;
   display: block;
   width: 100%;
   color: var(--color-lightgray);
-  font-size: 14px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-top: 25px;
   overflow: hidden;
@@ -244,7 +248,6 @@ body {
 }
 
 .main {
-  font-family: "OpenSans-Regular";
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -264,7 +267,6 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  font-family: "OpenSans-Regular";
 }
 
 .post {
@@ -273,7 +275,7 @@ body {
   flex-direction: row;
   box-sizing: border-box;
   gap: 3.8%;
-  margin-bottom: 60px;
+  margin-bottom: 62px;
   align-items: stretch;
 
 }
@@ -292,10 +294,10 @@ body {
   display: flex;
   gap: 20px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "OpenSans-Bold";
   margin-bottom: -14px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .main-categories a {
@@ -308,11 +310,12 @@ body {
 }
 
 .post-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   text-align: left;
   font-family: "OpenSans-Bold";
-  margin-bottom: 23px;
+  font-weight: 900;
+  margin-bottom: 22px;
   line-height: 125%;
 }
 
@@ -322,29 +325,33 @@ body {
 }
 
 .date-author {
-  font-family: "OpenSans-Regular";
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 .date-author .date {
-  font-size: 12px;
+  font-family: "OpenSans-Regular";
+  font-size: 0.75rem;
 }
 
 .author {
   font-family: "OpenSans-Bold";
   margin-left: 7px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
 }
 
 .text {
   max-height: 350px;
   max-width: 380px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-family: "OpenSans-Regular";
   line-height: 145%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.text p {
+margin-block-start: 0em;
 }
 
 .separator-line-long-mobile {
@@ -361,7 +368,6 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  font-family: "OpenSans-Regular";
   text-decoration: none;
   flex-wrap: wrap;
 }
@@ -369,7 +375,8 @@ body {
 h2 {
   font-family: "OpenSans-Bold";
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 900;
   text-align: center;
   margin-bottom: 0px;
 }
@@ -410,7 +417,7 @@ h2 {
 
 .menu-list .date {
   color: #7e7e7e;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: "OpenSans-Regular";
   text-align: left;
   text-transform: none;
@@ -420,16 +427,16 @@ h2 {
 
 .title {
   line-height: 130%;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "OpenSans-Bold";
   text-align: left;
   text-decoration: none;
-  color: black;
-  font-weight: bold;
+  color: var(--color-black);
+  font-weight: 900;
 }
 
 .menu-list a {
-  color: black;
+  color: var(--color-black);
   text-decoration: none;
 }
 
@@ -486,7 +493,8 @@ input:focus {
 
 .field {
   background-color: var(--color-gray);
-  font-size: 13px;
+  font-size: "OpenSans-Regular";
+  font-size: 0.8175rem;
   height: 50px;
   width: 100%;
   display: flex;
@@ -502,9 +510,9 @@ input:focus {
   width: 100%;
   height: 50px;
   background-color: var(--color-yellow);
-  color: white;
+  color: var(--color-white);
   font-family: "OpenSans-Bold";
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   border-color: transparent;
 }
@@ -521,8 +529,8 @@ input:focus {
   width: 100%;
   margin-top: 30px;
   font-family: "OpenSans-Bold";
-  font-weight: bold;
-  font-size: 12px;
+  font-weight: 900;
+  font-size: 0.75rem;
 }
 
 .tags-common {
@@ -542,11 +550,12 @@ input:focus {
 }
 
 .categories {
+  font-family: "OpenSans-Bold";
   width: 100%;
   max-width: 270px;
   margin-top: 15px;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 900;
+  font-size: 0.875rem;
   text-transform: capitalize;
 }
 
@@ -556,16 +565,18 @@ input:focus {
 
 .count {
   font-family: "OpenSans-Bold";
-  font-size: 10px;
+  font-weight: 900;
+  font-size: 0.675rem;
   color: var(--color-yellow);
   vertical-align: super;
+  padding-left: 5px;
 }
 
 .separator-line-long {
   border: none;
   border: 1px solid var(--color-lightgray);
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .shop {
@@ -576,17 +587,15 @@ input:focus {
   max-width: 1220px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0% 0% 0 2.5%;
-  top: -12px;
+  top: -23px;
   margin: 0 auto;
  
 }
 
 .products_name {
-  font-family: "OpenSans-Bold";
   font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+  font-weight: 900;
+  padding-right: 30px;
 }
 
 .products {
@@ -595,7 +604,7 @@ input:focus {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   height: auto;
 }
 
@@ -603,7 +612,7 @@ input:focus {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc((100% - 2 * 50px) / 3);
+  flex: 0 0 calc((100% - 2 * 30px) / 3);
   min-width: 300px;
   box-sizing: border-box;
 }
@@ -611,15 +620,14 @@ input:focus {
 .product_image {
   position: relative;
   height: auto;
-  object-fit: cover;
-  min-width: 300px;
   display: flex;
   justify-content: center;
 }
 
 .product_image img {
-  width: 85%;
+  width: 80%;
   justify-content: center;
+  object-fit: cover;
 }
 
 .shop_card {
@@ -630,15 +638,16 @@ input:focus {
   max-height: 320px;
   flex-direction: column;
   border: 3px solid var(--color-yellow);
-  margin-top: -30px;
-  padding: 0 20px;
+  margin-top: -40px;
+  padding: 0 30px;
   box-sizing: border-box;
 }
 
 .product-text {
   font-family: "OpenSans-Bold";
   text-transform: uppercase;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -655,7 +664,7 @@ input:focus {
   font-family: "OpenSans-Regular";
   font-weight: 400;
   text-transform: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 145%;
   margin-top: -15px;
 }
@@ -670,7 +679,7 @@ input:focus {
   justify-content: space-between;
   width: 100%;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 .cost {
@@ -678,8 +687,8 @@ input:focus {
   position: relative;
   width: 30%;
   text-align: left;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 1.25rem;
 }
 
 .cart-button {
@@ -687,13 +696,13 @@ input:focus {
   width: 50%;
   height: auto;
   align-self: flex-end;
-  height: 45px;
+  height: 50px;
   background-color: var(--color-yellow);
   color: white;
   font-family: "OpenSans-Bold";
-  font-size: 12px;
+  font-size: 0.875rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 900;
   border-color: transparent;
 }
 
@@ -703,7 +712,7 @@ input:focus {
 
 .last_cost {
   text-decoration: line-through;
-  font-size: 10px;
+  font-size: 0.675rem;
 }
 
 .footer {
@@ -715,7 +724,7 @@ input:focus {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 2.5% 2.5% 0 0.5%;
+  padding: 2% 1% 0 0%;
 }
 
 .product_description {
@@ -739,8 +748,9 @@ input:focus {
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: "OpenSans-Bold";
+  font-weight: bold;
   color: var(--color-darkgray);
   margin-top: 70px;
 }
@@ -774,7 +784,7 @@ input:focus {
 
 .popup h2 {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
 }
 
@@ -786,7 +796,7 @@ input:focus {
 
 .popup label {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .form_select {
@@ -885,12 +895,13 @@ input:focus {
   display: none;
 }
 
-@media screen and (max-width: 1200px) and (orientation: portrait) {
+@media screen and (max-width: 1200px)  {
   .header {
     min-height: 400px;
   }
+
   .header-top {
-    padding: 20px 40px;
+    padding: 22px 40px;
   }
 
   .logo {
@@ -898,11 +909,11 @@ input:focus {
   }
 
   .heading {
-    max-width: 85%;
+    max-width: 80%;
   }
 
   .heading_h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .icon-container {
@@ -916,9 +927,9 @@ input:focus {
   .hamburger {
     display: block;
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
-    top: 0px;
+    top: 20px;
     right: 30px;
     cursor: pointer;
   }
@@ -957,48 +968,48 @@ input:focus {
     width: calc(50% - 2px);
     min-width: none;
     left: 0px;
-    height: 250px;
+    height: 230px;
   }
 
 
   .card__body {
     border: 3px solid var(--color-yellow);
     width: 90%;
-    margin: 2% 7% 4% 5%;
-    padding: 4% 12% 4% 7%;
-  }
-
-  .card-text {
-    font-size: 16px;
+    margin: 2% 7% 5% 5%;
+    padding: 5% 10% 10% 7%;
   } 
   
   .main {
-    padding: 0 2% 0 2%;
+    padding: 0 2% 0 2.5%;
   }
 
   .post {
     margin-top: -10px;
     flex-direction: column;
-    padding: 0 2% 0 3%;
+    padding: 0 1% 0 2%;
   }
 
   .post-list {
-    width: calc(100% - 300px);
+    width: calc(100% - 327px);
   }
 
   .post-title {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-top: 20px;
     margin-bottom: 25px;
   }
 
   .menu-img-main {
-    width: 95%;
+    width: 100%;
     max-width: none;
   }
 
+  .frame {
+    width: 98%;
+  }
+
   .date-author {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .separator-line-long-mobile {
@@ -1008,10 +1019,14 @@ input:focus {
       border: none;
       border: 2px solid var(--color-lightgray);
       margin-top: -40px;
-      margin-bottom: 10%;
+      margin-bottom: 50px;
       width: 93%;
       left: 3%;
-    }
+  }
+
+  .text p {
+    margin-block-end: 0em;
+  }
 
   .side_bar {
     width: 270px;
@@ -1035,7 +1050,6 @@ input:focus {
   .main-categories {
     margin-top: 10px;
   }
-
  
   .shop {
     top: -15px;
@@ -1044,7 +1058,10 @@ input:focus {
   }
 
   .products {
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: flex-start;
   }
 
   .product {
@@ -1069,6 +1086,7 @@ input:focus {
 }
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
+
   .card {
     width: calc(25% - 3px);
   }
@@ -1081,13 +1099,19 @@ input:focus {
 
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
 
   .header {
     height: 100vh;
+    
   }
 
   .hamburger {
-    font-size: 45px;
+    top: 0;
+    font-size: 2.25rem;
+    right: 3%;
   }
 
   .logo {
@@ -1102,9 +1126,8 @@ input:focus {
   .header_icon {
     display: block;
     position: absolute;
-    top: 35%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -50%);
     width: 400px;
   }
 
@@ -1112,19 +1135,15 @@ input:focus {
     display: block;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 80%);
+    transform: translate(-50%, 50%);
     width: 100%;
-    font-size: 40px;
+    font-size: 1.9rem;
     line-height: 145%;
   }
 
   .trends_now {
-    font-size: 24px;
     margin: 0 auto;
-    font-family: "OpenSans-Bold";
-    font-weight: 900;
-    top: 60px;
-    padding-left: 40px;
+    top: 55px;
     margin-bottom: 60px;
   }
 
@@ -1132,7 +1151,6 @@ input:focus {
     width: 95px;
     border-top: 6px solid var(--color-verylightyellow);
   }
-
 
   .menu a {
     display: none;
@@ -1144,17 +1162,15 @@ input:focus {
   }
 
   .card__body {
-    width: 90%;
-    padding: 0% 5% 5% 5%;
+    width: 91%;
+    padding: 6% 5% 3% 5%;
   }
-
 
   .card-text {
     width: 100%;
-    font-size: 24px;
     line-height: 120%;
     text-transform: uppercase;
-    margin-top: 5%;
+    margin-top: 6%;
   }
 
   .main {
@@ -1169,17 +1185,23 @@ input:focus {
   }
 
   .menu-img-main {
-    width: 100%;
+    width: 98%;
   }
 
   .main-categories {
     margin-top: 4%;
-    font-size: 20px;
+    font-size: 1rem;
+    gap: 30px;
+
   }
 
   .post-title {
     margin-top: 6%;
-    font-size: 24px;
+    font-size: 1.09rem;
+  }
+
+  .frame {
+    width: 100%;
   }
 
   .date-author .date {
@@ -1190,58 +1212,58 @@ input:focus {
   .author {
     margin-left: 3%;
     font-size: 18px;
-    font-weight: bold;
+    
   }
 
   .text {
-    font-size: 22px;
+    font-size: 1.1rem;
     margin-top: -10px;
-    max-width: 800px;
+  
   }
 
   .separator-line-long-mobile {
-    margin-bottom: 8%;
+    margin-bottom: 12%;
   }
 
   .side_bar {
     width: 100%;
     min-width: 500px;
-    padding: 5% 3% 0 3%;
+    padding: 1% 2% 0 2%;
     right: 0px;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 1.2rem;
   }
 
   .menu-list-item {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 1rem;
     padding-top: 5px;
   }
 
   .menu-img {
-    width: 23%;
+    width: 22%;
     margin-right: 25px;
   }
 
   .menu-list .date {
-    font-size: 18px;
+    font-size: 0.9rem;
   }
   
   .search-bar {
-    margin-top: 70px;
-    height: 70px;
+    margin-top: 78px;
+    height: 75px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   
   .search-input {
-    font-size: 18px;
+    font-size: 0.9rem;
   }
   
   .search-button {
@@ -1249,148 +1271,142 @@ input:focus {
   }
   
   .form-row {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   
   .field {
-    font-size: 20px;
+    font-size: 1rem;
     height: 70px;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 35px;
     padding-left: 20px;
-    
   }
   
   .sent-button {
     width: 100%;
     height: 70px;
-    font-weight: bold;
-    font-size: 20px;
-    
+    font-weight: 900;
+    font-size: 1rem;
   }
   
-  
   .tags {
-    margin-top: 10px;
-    font-family: "OpenSans-Bold";
-    font-weight: bold;
-    font-size: 18px;
+    margin-top: 15px;
+    font-size: 0.9rem;
   }
   
   .tags-common {
-    margin-top: 0px;
-    display: inline-block;
-    line-height: 300%;
     margin-bottom: 15px;
   }
   
   .tag-categories {
     border: 5px solid var(--color-gray);
-    padding: 5px 17px;
+    padding: 5px 18px;
   }
   
   .categories {
-    width: 100%;
     max-width: none;
-    margin-top: 40px;
-    font-family: "OpenSans-Bold";
-    font-weight: bold;
-    font-size: 20px;
-    
+    margin-top: 23px;
+    font-size: 1.1rem;
+  }
+
+  .categories-list-common {
+    margin-top: 0px;
   }
   
   .count {
-    font-family: "OpenSans-Bold";
-    font-size: 16px;
-    font-weight: bold;
-  
+    font-size: 1rem;
+    padding-left: 5px;
   }
   
   .separator-line-long {
-    margin-top: 18px;
-    margin-bottom: 20px;
+    margin-top: 16px;
+    margin-bottom: 18px;
   }
   
   .shop {
     top: 0px;
     right: 0px;
-  }
-
-  .shop_card {
-    max-height: 400px;
+    padding: 0 0 0 3%;
   }
   
-  .product_name {
-    font-size: 24px;
+  .products_name {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+  }
+   
+  .product {
     margin-top: 10px;
-  }
-
-  .product_description {
-    font-size: 20px;
-    margin-top: -10px;
-  }
-  
-  .product_description a {
-    text-decoration: none;
-    color: var(--color-yellow);
-  }
-
-  .sale {
-    margin-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  .cost {
-    font-size: 24px;
-  }
-  
-  .cart-button {
-    font-size: 18px;
-    height: 70px;
-  }
-  
-  .last_cost {
-    font-size: 20px;
-  }
-  
- 
-  .social {
-    height: 120px;
-    gap: 30px;
-  }
-  
-  .icon {
-    display: inline-block;
-    width: 35px;
-    height: auto;
-  }
-  
-  .copyright {
-    font-size: 18px;
-  } 
-
-  .shop {
-    padding: 0 2% 0 3%;
+    margin-bottom: 20px;
+    flex: 0 0 100%;
   }
 
   .products {
     display: flex;
     flex-direction: column;
-  }
-
-  .product {
-    margin-bottom: 10%;
+    gap: 0;
   }
 
   .product_image img {
-    width: 85%;
-    height: 400px;
+    width: 82%;
   }
 
-  .sale {
-    margin-bottom: 5%;
+  .product_description {
+    font-family: "OpenSans-Bold";
+    font-size: 1rem;
+    margin-top: -10px;
   }
+
+  .product-text {
+    padding-top: 13%;
+  }
+
+ .shop_card {
+  margin-top: 20px;
+  max-height: 700px;
+  border: 5px solid var(--color-yellow);
+ }
+
+ .product_image {
+  height: 360px;
+ }
+  .sale {
+    margin-top: 30px;
+    padding-bottom: 15px;
+  }
+
+  .cost {
+    font-size: 1.2rem;
+  }
+  
+  .cart-button {
+    font-size: 0.9rem;
+    height: 70px;
+  }
+  
+  .last_cost {
+    font-size: 1rem;
+  }
+  .footer {
+    padding: 8% 5% 0 3%;
+  }
+ 
+  .social {
+    height: 120px;
+    gap: 35px;
+  }
+  
+  .icon {
+    display: inline-block;
+    width: 30px;
+    height: auto;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+  } 
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
