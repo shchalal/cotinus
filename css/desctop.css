@@ -18,18 +18,18 @@ body {
 }
 
 @font-face {
-  font-family: "OpenSans-Regular";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
-  src: url("../fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: normal;
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+       url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "OpenSans-Bold";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
-  src: url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+       url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@ body {
 .header {
   position: relative;
   width: 100%;
-  min-height: 455px;
+  min-height: 450px;
   color: var(--color-lightgray);
 }
 
@@ -49,14 +49,14 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  top: 25px;
+  top: 20px;
   align-items: center;
   z-index: 3;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.header_img img {
+.header-img img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -82,7 +82,7 @@ body {
   width: 100%;
   height: 30%;
   align-items: center;
-  padding: 1% 1% 0 1%;
+  padding: 1% 1% 0 2%;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -98,7 +98,7 @@ body {
 .menu ul {
   position: absolute;
   top: 5px;
-  right: 40px;
+  right: 25px;
   z-index: 3;
   list-style: none;
   display: flex;
@@ -107,7 +107,8 @@ body {
 }
 
 .menu a {
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
+  font-weight: normal;
   font-size: 0.8125rem;
   text-transform: uppercase;
   color: var(--color-white);
@@ -132,19 +133,20 @@ body {
   max-width: 58%
 }
 
-.header_icon {
+.header-icon {
   display: none;
 }
 
-.heading_h1 {
+.heading-h1 {
   position: relative;
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
+  font-weight: 900;
   color: var(--color-white);
   line-height: 160%;
   text-transform: uppercase;
   font-size: 2.8125rem;
   top: -10px;
-  right: 20px;
+  right: 0px;
 }
 
 .header .heading {
@@ -152,24 +154,22 @@ body {
   z-index: 2;
 }
 
-.teaser {
+.headline {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 0 auto;
-  right: 20px;
 }
 
-.trends_now {
-  font-family: "OpenSans-Bold";
+.caption {
+  font-family: "OpenSans";
   font-size: 1.25rem;
   display: flex;
   position: relative;
   align-items: center;
   text-transform: uppercase;
-  margin-top: 60px;
+  margin-top: 56px;
   font-weight: 900;
 }
 
@@ -177,31 +177,30 @@ body {
   display: flex;
   width: 100%;
   height: auto;
-  gap: 2px;
+  gap: 5px;
   flex-wrap: wrap;
   position: relative;
   flex-direction: row;
+ 
 }
 
 .card {
   position: relative;
-  width: calc(25% - 2px);
+  width: calc(25% - 4px);
   min-width: 200px;
   height: 320px;
   display: flex;
   flex-direction: column;
-  left: 40px;
-
 }
 
-.card__preview {
+.card--preview {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
 }
 
-.card__img {
+.card--img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -209,7 +208,7 @@ body {
   z-index: 1;
 }
 
-.card__preview::before {
+.card--preview::before {
   content: "";
   position: absolute;
   top: 0;
@@ -220,29 +219,29 @@ body {
   z-index: 2;
 }
 
-.card__body {
+.card--body {
   display: flex;
   position: absolute;
   bottom: 0;
   flex-direction: column;
-  border: 1px solid var(--color-yellow);
-  margin: 2% 2% 2% 2%;
-  padding: 5% 10% 5% 10%;
+  border: 4px solid var(--color-yellow);
+  margin: 10% 0% 3% 3.5%;
+  padding: 8% 5% 3% 10%;
   z-index: 3;
   box-sizing: border-box;
-  width: 96%;
+  width: 90%;
   text-transform: uppercase;
 }
 
 .card-text {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   font-weight: 900;
   display: block;
   width: 100%;
   color: var(--color-lightgray);
   font-size: 1.25rem;
   line-height: 140%;
-  margin-top: 25px;
+  margin-top: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -254,13 +253,13 @@ body {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
-  padding: 0 2.5% 0 0.5%;
+  padding: 0 1.5% 0 1.5%;
   box-sizing: border-box;
 
 }
 
 .post-list {
-  margin-top: 62px;
+  margin-top: 63px;
   width: 67%;
   flex-wrap: wrap;
   max-width: 780px;
@@ -275,7 +274,7 @@ body {
   flex-direction: row;
   box-sizing: border-box;
   gap: 3.8%;
-  margin-bottom: 62px;
+  margin-bottom: 60px;
   align-items: stretch;
 
 }
@@ -295,7 +294,8 @@ body {
   gap: 20px;
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
+  margin-top: -3px;
   margin-bottom: -14px;
   font-weight: 900;
 }
@@ -313,9 +313,9 @@ body {
   font-size: 1.25rem;
   text-transform: uppercase;
   text-align: left;
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   font-weight: 900;
-  margin-bottom: 22px;
+  margin-bottom: 27px;
   line-height: 125%;
 }
 
@@ -325,17 +325,18 @@ body {
 }
 
 .date-author {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .date-author .date {
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
+  font-weight: normal;
   font-size: 0.75rem;
 }
 
 .author {
-  font-family: "OpenSans-Bold";
-  margin-left: 7px;
+  font-family: "OpenSans";
+  margin-left: 9px;
   font-size: 0.75rem;
   font-weight: bold;
 }
@@ -344,7 +345,8 @@ body {
   max-height: 350px;
   max-width: 380px;
   font-size: 0.9375rem;
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
+  font-weight: normal;
   line-height: 145%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -359,7 +361,7 @@ margin-block-start: 0em;
 }
 
 
-.side_bar {
+.side-bar {
   padding-top: 48px;
   width: 27%;
   max-width: 270px;
@@ -373,12 +375,12 @@ margin-block-start: 0em;
 }
 
 h2 {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 2px;
 }
 
 .separator-container {
@@ -418,7 +420,8 @@ h2 {
 .menu-list .date {
   color: #7e7e7e;
   font-size: 0.75rem;
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
+  font-weight: normal;
   text-align: left;
   text-transform: none;
   margin-top: -4px;
@@ -428,7 +431,7 @@ h2 {
 .title {
   line-height: 130%;
   font-size: 0.875rem;
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   text-align: left;
   text-decoration: none;
   color: var(--color-black);
@@ -511,7 +514,7 @@ input:focus {
   height: 50px;
   background-color: var(--color-yellow);
   color: var(--color-white);
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   font-size: 0.875rem;
   text-transform: uppercase;
   border-color: transparent;
@@ -527,14 +530,14 @@ input:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 30px;
-  font-family: "OpenSans-Bold";
+  margin-top: 25px;
+  font-family: "OpenSans";
   font-weight: 900;
   font-size: 0.75rem;
 }
 
 .tags-common {
-  margin-top: 0px;
+  margin-top: -3px;
   display: inline-block;
   line-height: 300%;
   margin-bottom: 25px;
@@ -550,7 +553,7 @@ input:focus {
 }
 
 .categories {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   width: 100%;
   max-width: 270px;
   margin-top: 15px;
@@ -564,7 +567,7 @@ input:focus {
 }
 
 .count {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   font-weight: 900;
   font-size: 0.675rem;
   color: var(--color-yellow);
@@ -576,7 +579,7 @@ input:focus {
   border: none;
   border: 1px solid var(--color-lightgray);
   margin-top: 10px;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 }
 
 .shop {
@@ -584,18 +587,17 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1220px;
+  max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
-  top: -23px;
+  top: -15px;
   margin: 0 auto;
  
 }
 
-.products_name {
+.products-name {
   font-size: 20px;
   font-weight: 900;
-  padding-right: 30px;
 }
 
 .products {
@@ -617,20 +619,20 @@ input:focus {
   box-sizing: border-box;
 }
 
-.product_image {
+.product-image {
   position: relative;
   height: auto;
   display: flex;
   justify-content: center;
 }
 
-.product_image img {
+.product-image img {
   width: 80%;
   justify-content: center;
   object-fit: cover;
 }
 
-.shop_card {
+.shop-card {
   position: relative;
   display: flex;
   width: 95%;
@@ -639,12 +641,13 @@ input:focus {
   flex-direction: column;
   border: 3px solid var(--color-yellow);
   margin-top: -40px;
-  padding: 0 30px;
+  padding: 35px 20px;
   box-sizing: border-box;
+  margin-left: 15px;
 }
 
 .product-text {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   text-transform: uppercase;
   font-weight: 900;
   font-size: 1rem;
@@ -654,14 +657,13 @@ input:focus {
   width: 100%;
   height: 100%;
   text-align: left;
-  padding-top: 10%;
   box-sizing: border-box;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.product_description {
-  font-family: "OpenSans-Regular";
+.product-description {
+  font-family: "OpenSans";
   font-weight: 400;
   text-transform: none;
   font-size: 0.9375rem;
@@ -669,7 +671,7 @@ input:focus {
   margin-top: -15px;
 }
 
-.product_description a {
+.product-description a {
   text-decoration: none;
   color: var(--color-yellow);
 }
@@ -678,12 +680,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 10%;
-  margin-bottom: 7%;
+
 }
 
 .cost {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   position: relative;
   width: 30%;
   text-align: left;
@@ -699,7 +700,7 @@ input:focus {
   height: 50px;
   background-color: var(--color-yellow);
   color: white;
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans";
   font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -710,7 +711,7 @@ input:focus {
   background-color: rgb(50, 50, 50);
 }
 
-.last_cost {
+.last-cost {
   text-decoration: line-through;
   font-size: 0.675rem;
 }
@@ -720,14 +721,14 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1220px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 2% 1% 0 0%;
+  padding: 3% 0% 0 1%;
 }
 
-.product_description {
+.product-description {
   text-align: left;
 }
 
@@ -766,7 +767,8 @@ input:focus {
   align-items: center;
   justify-content: center;
   z-index: 3;
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
+  font-weight: normal;
 }
 
 .popup-wrapper {
@@ -799,7 +801,7 @@ input:focus {
   font-size: 0.75rem;
 }
 
-.form_select {
+.form-select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -811,13 +813,13 @@ input:focus {
   background-position: calc(100% - 10px) center;
 }
 
-.radio_button {
+.radio-button {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.radio_button input[type="radio"] {
+.radio-button input[type="radio"] {
   appearance: none;
   position: absolute;
   width: 0;
@@ -825,7 +827,7 @@ input:focus {
   opacity: 0;
 }
 
-.radio_button label {
+.radio-button label {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -836,11 +838,11 @@ input:focus {
   line-height: 16px;
 }
 
-.radio_button input[type="radio"]+label {
+.radio-button input[type="radio"]+label {
   background-image: url('../svg/form-empty-circle.svg');
 }
 
-.radio_button input[type="radio"]:checked+label {
+.radio-button input[type="radio"]:checked+label {
   background-image: url('../svg/form-circle.svg');
 }
 
@@ -891,7 +893,7 @@ input:focus {
   color: var(--color-yellow);
 }
 
-._hidden {
+.-hidden {
   display: none;
 }
 
@@ -912,7 +914,7 @@ input:focus {
     max-width: 80%;
   }
 
-  .heading_h1 {
+  .heading-h1 {
     font-size: 2.5rem;
   }
 
@@ -945,7 +947,7 @@ input:focus {
     padding: 0;
   }
 
-  .menu_header.active a {
+  .menu-header.active a {
     display: flex;
     flex-direction: column;
     top: 60px;
@@ -956,27 +958,27 @@ input:focus {
     z-index: 3;
   }
 
-  .teaser {
+  .headline {
     right: 0;
   }
 
-  .trends_now {
+  .caption {
     margin-top: 40px;
   }
 
   .card {
-    width: calc(50% - 2px);
+    width: calc(50% - 10px);
     min-width: none;
     left: 0px;
     height: 230px;
   }
 
 
-  .card__body {
+  .card--body {
     border: 3px solid var(--color-yellow);
     width: 90%;
     margin: 2% 7% 5% 5%;
-    padding: 5% 10% 10% 7%;
+    padding: 5% 10% 0% 7%;
   } 
   
   .main {
@@ -1028,7 +1030,7 @@ input:focus {
     margin-block-end: 0em;
   }
 
-  .side_bar {
+  .side-bar {
     width: 270px;
     padding-top: 38px;
     right: 20px;
@@ -1069,14 +1071,14 @@ input:focus {
     flex: 0 0 calc((100% - 50px) / 2);
   }
 
-  .product_image img {
+  .product-image img {
     width: 85%;
     height: 120%;
     padding-left: 0px;
     min-width: 100px;
 }
 
-.shop_card {
+.shop-card {
   margin-top: 0px;
 }
 
@@ -1123,7 +1125,7 @@ input:focus {
     width: 100%;
   }
 
-  .header_icon {
+  .header-icon {
     display: block;
     position: absolute;
     left: 50%;
@@ -1131,7 +1133,7 @@ input:focus {
     width: 400px;
   }
 
-  .heading_h1 {
+  .heading-h1 {
     display: block;
     position: absolute;
     left: 50%;
@@ -1141,7 +1143,7 @@ input:focus {
     line-height: 145%;
   }
 
-  .trends_now {
+  .caption {
     margin: 0 auto;
     top: 55px;
     margin-bottom: 60px;
@@ -1161,7 +1163,7 @@ input:focus {
     height: 350px;
   }
 
-  .card__body {
+  .card--body {
     width: 91%;
     padding: 6% 5% 3% 5%;
   }
@@ -1225,7 +1227,7 @@ input:focus {
     margin-bottom: 12%;
   }
 
-  .side_bar {
+  .side-bar {
     width: 100%;
     min-width: 500px;
     padding: 1% 2% 0 2%;
@@ -1330,7 +1332,7 @@ input:focus {
     padding: 0 0 0 3%;
   }
   
-  .products_name {
+  .products-name {
     font-size: 1.2rem;
     margin-top: 12px;
     padding-right: 5px;
@@ -1349,12 +1351,13 @@ input:focus {
     gap: 0;
   }
 
-  .product_image img {
+  .product-image img {
     width: 82%;
   }
 
-  .product_description {
-    font-family: "OpenSans-Bold";
+  .product-description {
+    font-family: "OpenSans";
+    font-weight: 900;
     font-size: 1rem;
     margin-top: -10px;
   }
@@ -1363,13 +1366,13 @@ input:focus {
     padding-top: 13%;
   }
 
- .shop_card {
+ .shop-card {
   margin-top: 20px;
   max-height: 700px;
   border: 5px solid var(--color-yellow);
  }
 
- .product_image {
+ .product-image {
   height: 360px;
  }
   .sale {
@@ -1386,7 +1389,7 @@ input:focus {
     height: 70px;
   }
   
-  .last_cost {
+  .last-cost {
     font-size: 1rem;
   }
   .footer {
