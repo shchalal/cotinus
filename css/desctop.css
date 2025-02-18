@@ -1090,7 +1090,11 @@ input:focus {
 @media screen and (max-width: 1200px) and (orientation: landscape) {
 
   .card {
-    width: calc(25% - 3px);
+    width: calc(25% - 4px);
+    min-width: 0;
+    height: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .product {
@@ -1106,8 +1110,7 @@ input:focus {
   }
 
   .header {
-    height: 100vh;
-    
+    height: 100vh; 
   }
 
   .hamburger {
@@ -1131,6 +1134,7 @@ input:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
+    max-width: 90%;
   }
 
   .heading-h1 {
@@ -1414,6 +1418,6 @@ input:focus {
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .card {
-    width: calc(50% - 2px);
+    width: calc(50% - 3px);
   }
 }
